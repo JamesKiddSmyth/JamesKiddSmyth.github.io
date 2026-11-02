@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/native-history/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Native Nations Through Time</title>
+    <script type="module" crossorigin src="/native-history/assets/index-DQbSGbGF.js"></script>
+    <link rel="stylesheet" crossorigin href="/native-history/assets/index-DJU72vhk.css">
+  </head>
+  <body>
+    <div id="map"></div>
+    <aside id="legend">
+      <h1>Native Nations Through Time</h1>
+      <div class="search">
+        <label for="search">Search nations, areas and events</label>
+        <input id="search" type="search" autocomplete="off" spellcheck="false" placeholder="e.g. Wendat, Fort Stanwix" />
+        <ul id="search-results"></ul>
+        <span id="search-status" class="visually-hidden" aria-live="polite"></span>
+      </div>
+      <details id="about" open>
+      <summary>About this map</summary>
+      <p class="prototype">
+        Prototype. From 800 to 1600, rough cultural spheres known from archaeology (not
+        nations' borders) and mound centres in the Southeast and Midwest. From 1600 to 1783 only
+        the lower Great Lakes and the Ohio country are mapped (grey elsewhere). After 1783: United
+        States treaty cessions and Canadian treaty areas. The drawn areas, the Mississippian
+        spheres and the grouping of treaty names into nations are first drafts, not yet reviewed.
+      </p>
+      <p>
+        Coloured areas are nations' lands (before 1600, archaeological cultures) as the cited sources describe them. Solid edges are
+        documented boundaries (treaty maps); dashed edges are estimates, drawn for this project
+        from published descriptions. Click an area or a marker for dates, accounts, sources and
+        links.
+      </p>
+      <ul class="key">
+        <li><span class="dot" style="background:#c0392b"></span>Battle</li>
+        <li><span class="dot" style="background:#1f5fbf"></span>Treaty</li>
+        <li><span class="dot" style="background:#8a5a2b"></span>Dispersal</li>
+        <li><span class="dot" style="background:#2a8a4a"></span>Settlement or mound centre</li>
+        <li><span class="dot" style="background:#3d0b0b"></span>Massacre</li>
+      </ul>
+      <p>
+        Where accounts disagree, each is given with whose account it is, and every proposed site
+        is marked. Haudenosaunee oral accounts are not yet included for most events.
+      </p>
+      <p>
+        Blank land is not empty land: it may have been shared hunting ground, or simply not yet
+        estimated. Native people stayed on or returned to much ceded land.
+      </p>
+      <p>
+        Point at the map to outline every area under the pointer; where areas overlap, a note
+        names them. The address bar keeps the year and view, so the page can be shared or
+        bookmarked as it is.
+      </p>
+      </details>
+      <label><input id="show-today" type="checkbox" /> Show today's US reservations and trust lands</label>
+      <label><input id="plain-basemap" type="checkbox" /> Hide modern borders, places and roads</label>
+    </aside>
+    <div id="overlap-readout" hidden aria-hidden="true"></div>
+    <footer id="bottom-bar">
+    <div id="timebar">
+      <button id="back" type="button" aria-label="Back one year">◀</button>
+      <button id="play" type="button" aria-label="Play">▶</button>
+      <button id="forward" type="button" aria-label="Forward one year">▶|</button>
+      <span id="year-label"></span>
+      <div class="track">
+        <div id="ticks"></div>
+        <input id="year" type="range" min="800" max="2026" step="1" value="1696" aria-label="Year" />
+      </div>
+    </div>
+    <p id="notice">
+      Boundaries shown are scholarly estimates. Many territories were shared, seasonal or
+      overlapping, and nations' own histories may differ from these sources.
+    </p>
+    </footer>
+  </body>
+</html>
